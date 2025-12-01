@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+body{
+  background-color: rgb(17, 24, 39);
+}
+
+.Genre{
+  @apply py-2 px-6 rounded-full transition-all duration-300 sm:text-xs md:text-sm lg:text-lg
+}
+.Genre:hover{
+  @apply bg-red-600 
+}
+.isActive{
+  @apply bg-red-600
+}
+.isNotActive{
+ @apply bg-[rgb(31,41,55)]
+}
