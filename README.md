@@ -54,14 +54,14 @@ React
 
 React Router
 
+Tailwind CSS
+
 OMDB API
+
+localStorage for favorites persistence
 
 <h1>🌐 API Used</h1>
 
 This project uses the OMDB API:
 
 👉 https://www.omdbapi.com/
-
-Tailwind CSS (if used)
-
-localStorage for favorites persistence
