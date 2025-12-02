@@ -9,7 +9,7 @@ function favorites(){
     useEffect(() => {
         const fetchData = async () => {
             const fetchPromises = await myFavMovies.map((myFavMovie) => {
-                return fetch(`http://www.omdbapi.com/?apikey=5a42856b&i=${myFavMovie}&plot=full`)
+                return fetch(`https://www.omdbapi.com/?apikey=5a42856b&i=${myFavMovie}&plot=full`)
             })
             const responses = await Promise.all(fetchPromises);
             const jsonResponses = responses.map(res => res.json());

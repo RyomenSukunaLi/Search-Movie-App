@@ -17,7 +17,7 @@ function Movies() {
     const fetchData = async () => {
       
       const res = await fetch(
-        `http://www.omdbapi.com/?i=tt4154796&apikey=5a42856b&s=${searchTerm}&page=${pageNumber}`
+        `https://www.omdbapi.com/?i=tt4154796&apikey=5a42856b&s=${searchTerm}&page=${pageNumber}`
       );
       const data = await res.json();
       const totalPages = Math.ceil(data.totalResults / 10);
