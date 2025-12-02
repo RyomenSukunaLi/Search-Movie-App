@@ -54,8 +54,6 @@ React
 
 React Router
 
-Tailwind CSS
-
 OMDB API
 
 Tailwind CSS
