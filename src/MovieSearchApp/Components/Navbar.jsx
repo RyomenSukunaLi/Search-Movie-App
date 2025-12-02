@@ -9,8 +9,8 @@ function Navbar(){
             <NavLink to={'/marvel'}><h1 className="text-xl font-bold">MoviesFlix</h1></NavLink>
         </div>
         <div className="flex gap-6">
-            <NavLink to={'/marvel'} className={({isActive}) => isActive ? 'text-gray-500' : 'text-white hover:text-red-500 transition-all duration-300'}>Home</NavLink>
-            <NavLink to={'/favorites'} className={({isActive}) => isActive ? 'text-gray-500' : 'text-white hover:text-red-500 transition-all duration-300'}>Favorites</NavLink>
+            <NavLink to={'/marvel'} className={({isActive}) => isActive ? 'text-red-500' : 'text-white hover:text-red-500 transition-all duration-300'}>Home</NavLink>
+            <NavLink to={'/favorites'} className={({isActive}) => isActive ? 'text-red-500' : 'text-white hover:text-red-500 transition-all duration-300'}>Favorites</NavLink>
         </div>
     </div>
     </>)
