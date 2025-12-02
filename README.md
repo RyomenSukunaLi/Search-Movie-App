@@ -58,6 +58,10 @@ Tailwind CSS
 
 OMDB API
 
+Tailwind CSS
+
+localStorage for favorites persistence
+
 <h1>🌐 API Used</h1>
 
 This project uses the OMDB API:
