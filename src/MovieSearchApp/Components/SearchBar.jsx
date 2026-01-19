@@ -8,7 +8,7 @@ function SearchBar(){
 
     const handleInput = (e) => {
         if(e.key == 'Enter' && searchValue.trim() !== ''){
-            navigate(`/${searchValue}/1`);
+            navigate(`/${searchValue}/page=1`);
         }
     }
     return(<>

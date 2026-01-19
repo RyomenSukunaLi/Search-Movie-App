@@ -7,7 +7,7 @@ function MovieRoutes(){
 
     return(<>
     <Routes>
-        <Route path={`/:movie/:page`} element={<Movies />} />
+        <Route path={`/:movie/:page?`} element={<Movies />} />
         <Route path={`/:movie/:page/:movieId/:movieName`} element={<MovieDetail />}/>
         <Route path='/favorites' element={<Favorites />}/>
     </Routes>
