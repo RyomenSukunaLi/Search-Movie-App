@@ -7,7 +7,6 @@ function MoviesGrid(props) {
   const { movieCards, movieName, totalPages, currentPage, defaultSearch } =
     props;
 
-  const [pagesArray, setPagesArray] = useState([]);
   const [favMovies, setFavMovies] = useState(() => {
     return JSON.parse(localStorage.getItem('favMovies')) || []
   });
@@ -28,9 +27,8 @@ function MoviesGrid(props) {
             movieCards.map((movieCard, index) => {
               const isFavorite = favMovies.includes(movieCard.imdbID);
               return <NavLink
-                to={`/${movieName || defaultSearch}/page=${currentPage}/id=${
-                  movieCard.imdbID
-                }/${movieCard.Title}`}
+                to={`/${movieName || defaultSearch}z/page=${currentPage}
+                /id=${movieCard.imdbID}/${movieCard.Title}`}
                 key={index}
               >
                 <div className="relative rounded-2xl flex w-full flex-col overflow-hidden hover:scale-102 transition-all duration-200 cursor-pointer">
@@ -68,8 +66,6 @@ function MoviesGrid(props) {
           )}
         </div>
         <Pagination
-          pagesArray={pagesArray}
-          setPagesArray={setPagesArray}
           totalPages={totalPages}
           movieName={movieName}
           defaultSearch={defaultSearch}

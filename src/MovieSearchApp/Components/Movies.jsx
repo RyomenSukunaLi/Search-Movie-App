@@ -20,6 +20,7 @@ function Movies() {
         `https://www.omdbapi.com/?i=tt4154796&apikey=5a42856b&s=${searchTerm}&page=${pageNumber}`
       );
       const data = await res.json();
+      console.log(data);
       const totalPages = Math.ceil(data.totalResults / 10);
       setTotalPages(totalPages);
       setMovieCards(data.Search);

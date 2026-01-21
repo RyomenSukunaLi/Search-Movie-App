@@ -1,19 +1,22 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Pagination(props){
-    const {totalPages, pagesArray, setPagesArray, movieName, defaultSearch} = props;
+    const {totalPages, movieName, defaultSearch} = props;
     const navigate = useNavigate();
-    
-    const handlePage = (e) => {
-        navigate(`/${movieName || defaultSearch}/page=${(e.target.innerHTML)}`)
-    }
+
+    const [pagesArray, setPagesArray] = useState([]);
+
     useEffect(() => {
         setPagesArray([]);
         for(let i = 0; i < totalPages; i++){
             setPagesArray(p => [...p, (i + 1)]);
         }
     },[totalPages])
+    
+    const handlePage = (e) => {
+        navigate(`/${movieName || defaultSearch}/page=${(e.target.innerHTML)}`)
+    }
     return(<>
     <div className="flex flex-wrap justify-start gap-3 py-4">
             {pagesArray.map((page, index) => (

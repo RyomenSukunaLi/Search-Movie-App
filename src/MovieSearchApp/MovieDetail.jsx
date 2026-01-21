@@ -4,8 +4,7 @@ import { Star } from 'lucide-react'
 
 function MovieDetail(){
     const movieParams = useParams();
-    const movieId = movieParams.movieId;
-    const imdbId = movieId.slice(3);
+    const imdbId = movieParams.movieId.slice(3);
     const [movie, setMovie] = useState({});
     const [Ratings, setRatings] = useState([]);
 
